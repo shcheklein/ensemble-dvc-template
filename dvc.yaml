@@ -1,0 +1,22 @@
+stages:
+  train:
+    foreach:
+      - model-1
+      - model-2
+    do:
+      cmd: python train.py
+      wdir: ${item}
+      params:
+        - params.yaml:
+      deps:
+      - train.py
+      metrics:
+      - ../metrics/${item}.json:
+          cache: false
+  evaluate:
+    cmd: python evaluate.py
+    deps: 
+    - metrics
+    metrics:
+    - evaluation.json
+

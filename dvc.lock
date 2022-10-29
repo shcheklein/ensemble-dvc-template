@@ -1,0 +1,39 @@
+schema: '2.0'
+stages:
+  train@model-1:
+    cmd: python train.py
+    deps:
+    - path: train.py
+      md5: d645294bba0e4836ddd72e373482b132
+      size: 174
+    params:
+      params.yaml:
+        res: 0.89
+    outs:
+    - path: ../metrics/model-1.json
+      md5: 68b4484cddd4a0970b673cc973190f06
+      size: 19
+  train@model-2:
+    cmd: python train.py
+    deps:
+    - path: train.py
+      md5: 692468581b96b7ebd9dc9ec1c5d2a24b
+      size: 174
+    params:
+      params.yaml:
+        res: 0.71
+    outs:
+    - path: ../metrics/model-2.json
+      md5: e9c4adb6f8724687862cc6d5c9c56759
+      size: 19
+  evaluate:
+    cmd: python evaluate.py
+    deps:
+    - path: metrics
+      md5: 9b6e2eda6a4609276256cb3ad48eb24e.dir
+      size: 38
+      nfiles: 2
+    outs:
+    - path: evaluation.json
+      md5: 131ce941a06cbb09344090df633e292a
+      size: 18
