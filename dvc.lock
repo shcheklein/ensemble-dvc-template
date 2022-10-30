@@ -13,14 +13,14 @@ stages:
     params:
       params.yaml:
         epochs: 100
-        res: 0.89
+        res: 0.8
     outs:
     - path: ../dvclive/model-1/metrics.json
-      md5: ee870f6fc90c1fcff75082d5e914aaad
-      size: 80
+      md5: 3d91060c4dee4fdaa3c6c7de26e6b297
+      size: 78
     - path: ../dvclive/model-1/plots/metrics/acc.tsv
-      md5: 787245c4e612c173d290bb0e9210244d
-      size: 3558
+      md5: 9427ea4953df20e5982e67a7bcad1955
+      size: 3541
     - path: model.pkl
       md5: 9bf9420263ef48d84c5de7aef39edb89
       size: 30
@@ -52,10 +52,10 @@ stages:
     cmd: python evaluate.py
     deps:
     - path: dvclive
-      md5: ff0e7cf2e3dc37477340c344ac78a14e.dir
-      size: 6506
+      md5: 35de709650ead7406fc0e254d17d3cdf.dir
+      size: 6487
       nfiles: 4
     outs:
     - path: evaluation/metrics.json
-      md5: 131ce941a06cbb09344090df633e292a
-      size: 18
+      md5: 6dc080dc0540054db23d5c4da64609cb
+      size: 20
