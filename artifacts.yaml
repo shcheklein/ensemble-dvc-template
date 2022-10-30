@@ -1,0 +1,7 @@
+model-1:
+  description: Model 1 to show case ensemble
+  labels:
+  - model
+  - classifier
+  path: model-1/model.pkl
+  type: model
