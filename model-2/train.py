@@ -3,7 +3,6 @@ import dvc.api
 import json
 
 params = dvc.api.params_show()
-print(params)
 res = params['params.yaml:res']
 epochs = params['params.yaml:epochs']
 
