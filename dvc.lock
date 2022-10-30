@@ -3,37 +3,53 @@ stages:
   train@model-1:
     cmd: python train.py
     deps:
+    - path: data
+      md5: 22ac7bd6debda43abfbda4ba90bad4d4.dir
+      size: 14
+      nfiles: 1
     - path: train.py
-      md5: d645294bba0e4836ddd72e373482b132
-      size: 174
+      md5: 8da782486ff5a9cbbb5c521d59d75fd3
+      size: 675
     params:
       params.yaml:
+        epochs: 100
         res: 0.89
     outs:
-    - path: ../metrics/model-1.json
-      md5: 68b4484cddd4a0970b673cc973190f06
-      size: 19
+    - path: ../dvclive/model-1/metrics.json
+      md5: ee870f6fc90c1fcff75082d5e914aaad
+      size: 80
+    - path: ../dvclive/model-1/plots/metrics/acc.tsv
+      md5: 52c93a32e2974bbc9c4c3f010387a219
+      size: 3659
   train@model-2:
     cmd: python train.py
     deps:
+    - path: data
+      md5: c9be04e74f247fa484b713ca682a4a43.dir
+      size: 21
+      nfiles: 1
     - path: train.py
-      md5: 692468581b96b7ebd9dc9ec1c5d2a24b
-      size: 174
+      md5: d8e349b00f7946cc6691fbe69d2f159b
+      size: 673
     params:
       params.yaml:
+        epochs: 78
         res: 0.71
     outs:
-    - path: ../metrics/model-2.json
-      md5: e9c4adb6f8724687862cc6d5c9c56759
-      size: 19
+    - path: ../dvclive/model-2/metrics.json
+      md5: ce6ebebdcd9f67d8c145cd43fc18d0d2
+      size: 79
+    - path: ../dvclive/model-2/plots/metrics/acc.tsv
+      md5: 460eb89475debc42d2c94da1f13cae26
+      size: 2868
   evaluate:
     cmd: python evaluate.py
     deps:
-    - path: metrics
-      md5: 9b6e2eda6a4609276256cb3ad48eb24e.dir
-      size: 38
-      nfiles: 2
+    - path: dvclive
+      md5: d439c59138cbe948f18cd3423cec878c.dir
+      size: 6686
+      nfiles: 4
     outs:
-    - path: evaluation.json
+    - path: evaluation/metrics.json
       md5: 131ce941a06cbb09344090df633e292a
       size: 18

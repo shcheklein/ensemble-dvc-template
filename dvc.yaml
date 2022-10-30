@@ -10,13 +10,20 @@ stages:
         - params.yaml:
       deps:
       - train.py
+      - data
       metrics:
-      - ../metrics/${item}.json:
+      - ../dvclive/${item}/metrics.json:
           cache: false
+      plots:
+      - ../dvclive/${item}/plots/metrics/acc.tsv:
+          cache: false
+          x: step
+          y: acc
   evaluate:
     cmd: python evaluate.py
     deps: 
-    - metrics
+    - dvclive
     metrics:
-    - evaluation.json
+    - evaluation/metrics.json:
+        cache: false
 

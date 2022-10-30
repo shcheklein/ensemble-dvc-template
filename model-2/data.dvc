@@ -1,0 +1,6 @@
+outs:
+- md5: c9be04e74f247fa484b713ca682a4a43.dir
+  size: 21
+  nfiles: 1
+  path: data
+  cache: false
