@@ -7,8 +7,9 @@ There is no actual ML model train code, no frameworks, no actual data. This is
 made to showcase the possible project layout, how to run this pipeline to see
 metrics, plots, etc.
 
-Explore [CLI](#cli), [VS Code extension](#vs-code-extension) and
-[Studio](#studio) tools to experiments, visualize, and share the results.
+Explore [CLI](#cli), [VS Code extension](#vs-code-extension),
+[Studio](#studio), and [Codespaces](#codespaces) tools to experiments,
+visualize, and share the results.
 
 ## Stucture
 
@@ -118,4 +119,13 @@ provides a collaborative interface to share experiments, see and manage ML model
 
 
 https://user-images.githubusercontent.com/3659196/198904752-807a9c8e-7f80-4fea-ba21-efaac4bd91ef.mp4
+
+## Codespaces
+
+Project also can be run in the
+[GitHub Codespaces](https://github.com/features/codespaces) for the in browser or descktop
+platform that is deployed with one click:
+
+https://user-images.githubusercontent.com/3659196/198906563-b451b951-13f2-45ac-883c-8f03709622c0.mp4
+
 
