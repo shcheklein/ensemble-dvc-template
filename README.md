@@ -7,6 +7,9 @@ There is no actual ML model train code, no frameworks, no actual data. This is
 made to showcase the possible project layout, how to run this pipeline to see
 metrics, plots, etc.
 
+Explore [CLI](#cli), [VS Code extension](#vs-code-extension) and
+[Studio](#studio) tools to experiments, visualize, and share the results.
+
 ## Stucture
 
 ```
@@ -101,3 +104,18 @@ and provides a visual layer for DVC experiments, plots, and common actions for
 data management.
 
 https://user-images.githubusercontent.com/3659196/198889808-488193f9-c4fa-4f7f-9287-dbc4bf8774be.mp4
+
+
+## Studio
+
+Open
+[public project](https://studio.iterative.ai/user/shcheklein/projects/ensemble-dvc-template-7u1t1fys3z)
+for this repository.
+
+[Studio](https://studio.iterative.ai/) (see docs [here](https://dvc.org/doc/studio))
+provides a collaborative interface to share experiments, see and manage ML models in
+[model registry](https://dvc.org/doc/studio/user-guide/model-registry/what-is-a-model-registry).
+
+
+https://user-images.githubusercontent.com/3659196/198904752-807a9c8e-7f80-4fea-ba21-efaac4bd91ef.mp4
+
