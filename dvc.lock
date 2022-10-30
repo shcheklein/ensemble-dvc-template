@@ -8,8 +8,8 @@ stages:
       size: 14
       nfiles: 1
     - path: train.py
-      md5: 8da782486ff5a9cbbb5c521d59d75fd3
-      size: 675
+      md5: 63c6adcd9eaaf8ba62ed036336bdf6a8
+      size: 800
     params:
       params.yaml:
         epochs: 100
@@ -19,8 +19,11 @@ stages:
       md5: ee870f6fc90c1fcff75082d5e914aaad
       size: 80
     - path: ../dvclive/model-1/plots/metrics/acc.tsv
-      md5: 52c93a32e2974bbc9c4c3f010387a219
-      size: 3659
+      md5: 787245c4e612c173d290bb0e9210244d
+      size: 3558
+    - path: model.pkl
+      md5: 9bf9420263ef48d84c5de7aef39edb89
+      size: 30
   train@model-2:
     cmd: python train.py
     deps:
@@ -29,8 +32,8 @@ stages:
       size: 21
       nfiles: 1
     - path: train.py
-      md5: d8e349b00f7946cc6691fbe69d2f159b
-      size: 673
+      md5: 9c6c346466fb1ec6421593389fda0f58
+      size: 800
     params:
       params.yaml:
         epochs: 78
@@ -40,14 +43,17 @@ stages:
       md5: ce6ebebdcd9f67d8c145cd43fc18d0d2
       size: 79
     - path: ../dvclive/model-2/plots/metrics/acc.tsv
-      md5: 460eb89475debc42d2c94da1f13cae26
-      size: 2868
+      md5: 5cc3c68699441a829047fe087fcb9580
+      size: 2789
+    - path: model.pkl
+      md5: b0e8865416da765a739612a2035b0a8b
+      size: 30
   evaluate:
     cmd: python evaluate.py
     deps:
     - path: dvclive
-      md5: d439c59138cbe948f18cd3423cec878c.dir
-      size: 6686
+      md5: ff0e7cf2e3dc37477340c344ac78a14e.dir
+      size: 6506
       nfiles: 4
     outs:
     - path: evaluation/metrics.json

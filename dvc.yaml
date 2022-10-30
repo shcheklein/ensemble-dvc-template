@@ -11,6 +11,9 @@ stages:
       deps:
       - train.py
       - data
+      outs:
+      - model.pkl:
+          cache: false
       metrics:
       - ../dvclive/${item}/metrics.json:
           cache: false

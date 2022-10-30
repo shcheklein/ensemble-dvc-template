@@ -1,6 +1,8 @@
+import json
+import pickle
+
 from dvclive import Live
 import dvc.api
-import json
 
 params = dvc.api.params_show()
 res = params['params.yaml:res']
@@ -22,6 +24,13 @@ for epoch in range(epochs):
     live.next_step()
 
 
+# Dump model
+model = {'my': 'model-1'}
+with open('model.pkl', 'wb') as f:
+    pickle.dump(model, f)
+
+
+# Log summary metrics
 live.summary["best_acc"] = res
 live.summary["num_entries"] = num_entries
 live.make_summary()
