@@ -93,4 +93,11 @@ dvc plots diff
 
 <img width="1153" alt="Screen Shot 2022-10-29 at 9 18 39 PM" src="https://user-images.githubusercontent.com/3659196/198862370-a7a5bb09-dfcc-4240-8f63-ef52662d7f2f.png">
 
+## VS Code Extension
 
+Can be installed from the
+[marketplace](https://marketplace.visualstudio.com/items?itemName=Iterative.dvc)
+and provides a visual layer for DVC experiments, plots, and common actions for
+data management.
+
+https://user-images.githubusercontent.com/3659196/198889808-488193f9-c4fa-4f7f-9287-dbc4bf8774be.mp4
