@@ -60,3 +60,37 @@ metrics, plots, etc.
     ...
 └── requirements.txt
 ```
+
+## CLI
+
+Using set of the
+[`dvc exp`](https://dvc.org/doc/start/experiment-management/experiments)
+commands it's possible to iterate on models and compare different iterations
+with each other.
+
+```
+vim model-1/params.yaml. # change params
+dvc exp run              # run an experiment 
+dvc exp show             # show all experiments
+
+# Queue multiple experiments and run them:
+dvc exp run --queue -S model-1/params.yaml:res=0.8,0.82,0.84,0.86
+dvc exp run --run-all
+
+# Show experimnents again:
+dvc exp show
+```
+
+https://user-images.githubusercontent.com/3659196/198862257-ad0e4cc0-8265-47a2-98ac-cae590f25373.mp4
+
+Also, it's possible to show plots with:
+
+```
+dvc plots show
+# or
+dvc plots diff
+```
+
+<img width="1153" alt="Screen Shot 2022-10-29 at 9 18 39 PM" src="https://user-images.githubusercontent.com/3659196/198862370-a7a5bb09-dfcc-4240-8f63-ef52662d7f2f.png">
+
+
