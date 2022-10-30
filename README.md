@@ -94,7 +94,7 @@ dvc plots show
 dvc plots diff
 ```
 
-<img width="1153" alt="Screen Shot 2022-10-29 at 9 18 39 PM" src="https://user-images.githubusercontent.com/3659196/198862370-a7a5bb09-dfcc-4240-8f63-ef52662d7f2f.png">
+<img width="1156" alt="Screen Shot 2022-10-30 at 3 35 23 PM" src="https://user-images.githubusercontent.com/3659196/198904947-02b339eb-8573-4ffe-9430-5c382020a463.png">
 
 ## VS Code Extension
 
