@@ -20,7 +20,7 @@ num_entries = sum(1 for line in open('data/data.csv'))
 # https://dvc.org/doc/dvclive/api-reference/ml-frameworks
 for epoch in range(epochs):
     # train_model(...)
-    live.log("acc", res / (epochs - epoch))
+    live.log_metric("acc", res / (epochs - epoch))
     live.next_step()
 
 
