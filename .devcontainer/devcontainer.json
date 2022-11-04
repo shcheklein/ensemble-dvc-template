@@ -1,5 +1,5 @@
 {
-  "name": "hackathon",
+  "name": "ensemble",
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
   "extensions": ["Iterative.dvc", "ms-python.python", "redhat.vscode-yaml"],
   "features": {
