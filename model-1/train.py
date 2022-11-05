@@ -1,14 +1,14 @@
-import json
 import pickle
 
-from dvclive import Live
 import dvc.api
+from dvclive import Live
+
 
 params = dvc.api.params_show()
 res = params['params.yaml:res']
 epochs = params['params.yaml:epochs']
 
-live = Live("../dvclive/model-1")
+live = Live("../dvclive/model-1", report=None)
 
 
 # Read data, just for the sake of a complete example
