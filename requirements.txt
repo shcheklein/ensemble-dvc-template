@@ -1,2 +1,2 @@
 dvc
-git+https://github.com/iterative/dvclive
+dvclive
