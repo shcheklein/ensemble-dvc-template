@@ -5,3 +5,9 @@ model-1:
   - classifier
   path: model-1/model.pkl
   type: model
+model-2:
+  labels:
+  - ensemble
+  - classifier
+  path: model-2/model.pkl
+  type: model
